@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Tasbeeh Count</string>
+    <string name="count">Count</string>
+    <string name="reset">Reset</string>
+    <string name="start">Start Count</string>
+    <string name="action_settings">Settings</string>
+    <string name="set">Set Target</string>
+    <string name="exit">Exit</string>
+    <string name="zero">0</string>
+    <string name="sound_off">Sound Off</string>
+    <string name="sound_on">Sound On</string>
+    <string name="vib_on">Vibration On</string>
+    <string name="vib_off">Vibration Off</string>
+</resources>
