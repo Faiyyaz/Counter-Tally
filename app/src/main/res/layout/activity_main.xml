@@ -10,112 +10,108 @@
     tools:context="com.khatri.tasbeehcount.MainActivity"
     android:background="@android:color/black">
 
-    <ScrollView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+<ToggleButton
+    android:textSize="12sp"
+    android:layout_width="100sp"
+    android:layout_height="wrap_content"
+    android:textOff="@string/sound_off"
+    android:textOn="@string/sound_on"
+    android:id="@+id/toggle"
+    android:checked="true" />
 
-    <ToggleButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textOff="@string/sound_off"
-        android:textOn="@string/sound_on"
-        android:id="@+id/toggle"
-        android:checked="true" />
+<ToggleButton
+    android:textSize="12sp"
+    android:textOff="@string/vib_off"
+    android:textOn="@string/vib_on"
+    android:layout_toRightOf="@+id/toggle"
+    android:layout_width="120sp"
+    android:layout_height="wrap_content"
+    android:id="@+id/vibtoggle"
+    android:checked="true" />
 
-    <ToggleButton
-        android:textOff="@string/vib_off"
-        android:textOn="@string/vib_on"
-        android:layout_toRightOf="@+id/toggle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/vibtoggle"
-        android:checked="true" />
+        <TextView
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/settarget"
+            android:text="@string/set"
+            android:gravity="center"
+            android:layout_alignBottom="@+id/setcount"
+            android:layout_alignLeft="@+id/count"
+            android:layout_alignStart="@+id/count"
+            android:layout_alignTop="@+id/setcount"
+            android:layout_toLeftOf="@+id/setcount"
+            android:layout_toStartOf="@+id/setcount" />
 
-    <EditText
-        android:layout_below="@+id/toggle"
-        android:text="@string/zero"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/setcount"
-        android:textSize="40sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/set"
-        android:inputType="number"
-        android:textColorHint="@android:color/white"
-        android:textColor="@android:color/white"/>
+<EditText
+    android:text="0"
+    android:gravity="center"
+    android:id="@+id/setcount"
+    android:textSize="40sp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:hint="@string/set"
+    android:inputType="number"
+    android:textColorHint="@android:color/white"
+    android:textColor="@android:color/white"
+    android:layout_toEndOf="@+id/vibtoggle"
+    android:layout_below="@+id/vibtoggle"
+    android:layout_toRightOf="@+id/vibtoggle" />
 
-    <TextView
-        android:layout_marginTop="10sp"
-        android:layout_below="@+id/setcount"
-        android:background="@drawable/bg"
-        android:id="@+id/tv"
-        android:textSize="40sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/start"
-        android:layout_centerHorizontal="true"
-        android:textColor="@android:color/white"/>
+<TextView
+    android:layout_margin="30sp"
+    android:layout_below="@+id/setcount"
+    android:id="@+id/tv"
+    android:textSize="40sp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/start"
+    android:layout_centerHorizontal="true"
+    android:textColor="@android:color/white"/>
 
-    <TextView
-        android:layout_marginTop="10sp"
-        android:layout_below="@+id/tv"
-        android:background="@drawable/bg"
-        android:id="@+id/tv1"
-        android:textSize="40sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:textColor="@android:color/white"/>
+<Button
+    android:gravity="center"
+    android:textColor="@android:color/black"
+    android:layout_margin="5sp"
+    android:background="@drawable/button_selected"
+    android:layout_above="@+id/reset"
+    android:id="@+id/count"
+    android:textSize="20sp"
+    android:text="@string/count"
+    android:layout_height="90sp"
+    android:layout_width="match_parent"/>
 
-    <Button
-        android:textColor="@android:color/white"
-        android:layout_margin="5sp"
-        android:background="@drawable/button"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/tv1"
-        android:id="@+id/count"
-        android:textSize="20sp"
-        android:text="@string/count"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"/>
+<Button
+    android:gravity="center"
+    android:layout_above="@+id/exit"
+    android:textColor="@android:color/black"
+    android:layout_margin="5sp"
+    android:background="@drawable/button_selected"
+    android:layout_centerHorizontal="true"
+    android:id="@+id/reset"
+    android:textSize="20sp"
+    android:text="@string/reset"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"/>
 
-    <Button
-        android:layout_below="@+id/count"
-        android:textColor="@android:color/white"
-        android:layout_margin="5sp"
-        android:background="@drawable/button"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/reset"
-        android:textSize="20sp"
-        android:text="@string/reset"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"/>
-
-    <Button
-        android:layout_below="@id/reset"
-        android:textColor="@android:color/white"
-        android:layout_margin="5sp"
-        android:background="@drawable/button"
-        android:id="@+id/set"
-        android:textSize="20sp"
-        android:text="@string/set"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"/>
-
-    <Button
-        android:layout_below="@id/set"
-        android:textColor="@android:color/white"
-        android:layout_margin="5sp"
-        android:background="@drawable/button"
-        android:id="@+id/exit"
-        android:textSize="20sp"
-        android:text="@string/exit"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"/>
-        </RelativeLayout>
-    </ScrollView>
+<Button
+    android:gravity="center"
+    android:layout_alignParentBottom="true"
+    android:textColor="@android:color/black"
+    android:layout_margin="5sp"
+    android:background="@drawable/button_selected"
+    android:id="@+id/exit"
+    android:textSize="20sp"
+    android:text="@string/exit"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"/>
+    </RelativeLayout>
 </RelativeLayout>

@@ -11,6 +11,7 @@
         android:theme="@style/AppTheme">
 
         <activity android:name="com.khatri.tasbeehcount.MainActivity"
+            android:screenOrientation="portrait"
             android:configChanges="orientation|screenSize|screenLayout">
             <intent-filter>
 
@@ -20,6 +21,9 @@
 
             </intent-filter>
         </activity>
+
+        <activity android:name=".About"
+            android:screenOrientation="portrait"/>
 
     </application>
 

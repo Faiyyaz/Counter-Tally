@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Tasbeeh Count</string>
+    <string name="app_name">Counter Tally</string>
     <string name="count">Count</string>
     <string name="reset">Reset</string>
     <string name="start">Start Count</string>
@@ -8,7 +8,8 @@
     <string name="exit">Exit</string>
     <string name="zero">0</string>
     <string name="sound_off">Sound Off</string>
-    <string name="sound_on">Sound On</string>
-    <string name="vib_on">Vibration On</string>
+    <string name="sound_on">Sound  On</string>
+    <string name="vib_on">Vibration  On</string>
     <string name="vib_off">Vibration Off</string>
+    <string name="about">Counter Tally is an app where you can pray as well as count the number of times you pray. \n There are Two options in the App :- \n 1. You Can Set a Target for counting. \n 2. You can count till the time you want. \n The app will vibrate for a long time on every 100 count and on target achievement it will ask you that do you want to pray more or not. \n Developed By Mohammed Faiyyaz Khatri \n Thanks for your support \n May all of us get the reward for this good deed. \n Please give your valuable feedback it will help in further improvement</string>
 </resources>
